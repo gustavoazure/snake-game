@@ -1,3 +1,4 @@
+
 body{
     padding: 1%; 
     height: auto;
@@ -7,17 +8,16 @@ body{
     justify-content:center;
     align-items: center;
     background-color:white;
-    color: rgb(52, 165, 52);
+    color: aliceblue;
     background-color:black;
     background-position: left;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
-       
+
 }
 
-
-h1{
-    color: aliceblue;
+p {
+    margin: auto;
 }
 
 canvas {

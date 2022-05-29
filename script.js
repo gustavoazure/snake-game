@@ -25,12 +25,21 @@ function criarCobrinha(){
     for(i = 0; i <snake.length; i++){
         context.fillStyle = "green";
         context.fillRect(snake[i].x, snake[i].y, box, box);
+
     }
 }
 
 function drawFood(){
     context.fillStyle = "red";
     context.fillRect(food.x, food.y, box, box);
+}
+function points(){
+        context.textAlign = "center";
+        context.fillStyle = "black";
+        context.font = "30px Arial";
+        context.fillText(pontos, canvas.clientWidth/2, 50);
+        context.font = "20px Arial";
+        context.fillText("Pontuação", canvas.clientWidth/2, 20);
 }
 
 function play(){
@@ -69,6 +78,7 @@ function iniciarJogo(){
     criarBackground();
     criarCobrinha();
     drawFood();
+    points();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -84,7 +94,8 @@ function iniciarJogo(){
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
         pontos+=1;
-        interval-=100;
+
+       
     }
 
     let newHead = {
